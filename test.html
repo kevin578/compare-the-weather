@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<script src = "node_modules/mustache/mustache.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+<div id="target"></div>
+
+
+<script id="template" type="x-tmpl-mustache">
+<h1>Hello {{ name }}!</h1>
+<p>Its {{name2}}</p>
+</script>
+</body>
+</html>
+
+
+
+<script>
+function loadUser() {
+  var names = {
+    name: "Luke",
+    name2: "Kevin"
+  }
+  var template = $('#template').html();
+  Mustache.parse(template);   // optional, speeds up future uses
+  var rendered = Mustache.render(template, names);
+  $('#target').append(rendered);
+}
+
+for (var i = 0; i < 3; i++) {
+  loadUser();
+}
+
+</script>
+

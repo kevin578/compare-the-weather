@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<link rel = "stylesheet" href = "style.css">
+<link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src = "node_modules/mustache/mustache.js"></script>
+<script src = "main.js"></script>
+<script src="https://use.fontawesome.com/d2bbd36ba3.js"></script>
+<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRAN_9JOJurd87FpfqMH_puJd_loAHxJ4&libraries=places&callback=initAutocomplete"async defer></script>
+
+
+
+
+
+</head>
+
+
+<body>
+
+<nav class = "nav navbar-inverse">
+
+<div class = "contrainer-fluid">
+	<a class="navbar-brand" href="#">Compare the weather</a>
+
+<form class="navbar-form navbar-left" role="search">
+  <div class="form-group" id = "locationField">
+    <input id = "autocomplete" type="text" class="form-control" placeholder="New location">
+  </div>
+  <button type = "button" id = "add_button" class="btn btn-default" onclick = "retrieveWeather()">Add</button>
+  <input id = "toggle" type="checkbox" checked data-toggle="toggle" data-on= &#x2109 data-off= &#x2103 data-onstyle="default">
+</form>
+<a href = "https://github.com/kevin578/free_code_camp/tree/master/intermediate-projects/random-quote-machine" id = "github_link" target = "_blank" class = "navbar-link"><i class="fa fa-github" aria-hidden="true"></i></a>
+</div>
+
+</nav>
+
+
+<div class = "container">
+	
+	<div class = "row" id = "target">
+
+
+<script id="template" type="x-tmpl-mustache">
+
+		<div class = "col-md-5 weather-box">
+	
+			<div class = "row">
+				<div class = "col-md-8">
+					<h1 id = "cityName">{{city}}</h1>
+					<p id = "temp">{{temp}} {{unit_symbol}}</p>
+				</div>
+				<div class = "col-md-4">
+					<img id ="weather_icon" src = {{icon}}>
+				</div>
+			</div>
+		</div>
+</script>
+	
+	</div>
+
+
+</div>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+</html>
+
+
+
