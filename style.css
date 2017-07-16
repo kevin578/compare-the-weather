@@ -16,7 +16,8 @@ img {
 
 .weather-box {
    box-shadow: 0px 0px 5px grey;
-   margin: 30px;
+   margin-top: 50px; 
+   margin-right: 50px;
 }
 
 
